@@ -30,7 +30,6 @@ A modern web application to explore Roblox profiles with detailed statistics, fr
 ### Prerequisites
 - Node.js 16+
 - npm/yarn
-- Roblox API key (optional)
 
 ### Installation
 ```bash
