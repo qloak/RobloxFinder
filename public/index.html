@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roblox Profile Viewer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <div class="logo">
+        <i class="fab fa-roblox"></i>
+        <h1>Roblox Profile</h1>
+      </div>
+      <div class="search-container">
+        <input type="text" id="usernameInput" placeholder="Search Roblox username..." autocomplete="off">
+        <button id="searchBtn">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    </header>
+
+    <main class="profile-container hidden" id="profile">
+      <section class="profile-header">
+        <div class="avatar-placeholder" id="avatar"></div>
+        <div class="profile-info">
+          <h2 id="displayUsername">Username</h2>
+          <p class="user-id" id="userId"></p>
+          <p class="description" id="description">No description available</p>
+        </div>
+      </section>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h3>Friends</h3>
+          <span class="stat-value" id="friendsCount">0</span>
+        </div>
+        <div class="stat-card">
+          <h3>Following</h3>
+          <span class="stat-value" id="followingCount">0</span>
+        </div>
+        <div class="stat-card">
+          <h3>Badges</h3>
+          <span class="stat-value" id="badgesCount">0</span>
+        </div>
+        <div class="stat-card">
+          <h3>Groups</h3>
+          <span class="stat-value" id="groupsCount">0</span>
+        </div>
+      </div>
+
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="friends">Friends</button>
+        <button class="tab-btn" data-tab="following">Following</button>
+        <button class="tab-btn" data-tab="badges">Badges</button>
+        <button class="tab-btn" data-tab="games">Favorite Games</button>
+        <button class="tab-btn" data-tab="groups">Groups</button>
+      </div>
+
+      <div class="tab-content">
+        <div class="search-container">
+          <input type="text" id="contentSearch" placeholder="Search..." class="hidden">
+        </div>
+        <div class="content-section active" id="friends-content">
+          <ul class="content-list" id="friendsList"></ul>
+        </div>
+        <div class="content-section" id="following-content">
+          <ul class="content-list" id="followingList"></ul>
+        </div>
+        <div class="content-section" id="badges-content">
+          <ul class="content-list" id="badgesList"></ul>
+        </div>
+        <div class="content-section" id="games-content">
+          <ul class="content-list" id="gamesList"></ul>
+        </div>
+        <div class="content-section" id="groups-content">
+          <ul class="content-list" id="groupsList"></ul>
+        </div>
+      </div>
+    </main>
+
+    <div class="loading hidden" id="loading">
+      <div class="spinner"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
