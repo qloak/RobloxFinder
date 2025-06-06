@@ -5,6 +5,16 @@ const cors = require('cors');
 const app = express();
 const PORT = 3000;
 
+const path = require('path');
+
+// Serve static files from the "public" directory
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Optional: Explicitly serve index.html at root
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
 app.use(cors());
 app.use(express.json());
 
