@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   // API Configuration
-  const API_BASE = 'http://localhost:3000/api';
+  const API_BASE = 'https://robloxfinder.onrender.com/api';
   const CACHE_EXPIRY = 5 * 60 * 1000; // 5 minutes cache expiry
   const ROBLOX_PROFILE_BASE = 'https://www.roblox.com/users/';
   const ROBLOX_GROUP_BASE = 'https://www.roblox.com/groups/';
